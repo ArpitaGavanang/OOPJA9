@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class Exception {
+
+public static void main(String[] args) {
+	try{
+	Scanner sc = new Scanner(System.in);
+	System.out.println("Enter Number: ");
+	int A = sc.nextInt();
+	if( A%2 != 0 )
+		throw new BootstrapMethodError("Odd number Exception");
+		System.out.println(A);
+	}catch( BootstrapMethodError ex ) {
+		System.out.println("Inside BootstrapMethodError Method" );
+		ex.printStackTrace();
+	}finally {
+		System.out.println("Inside Finally Block" );
+	} 
+	}
+	}
